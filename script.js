@@ -162,4 +162,3 @@
    // -> false
   console.log(123 == '123');
   // -> true
-//
