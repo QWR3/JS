@@ -136,7 +136,7 @@
 // let moriah = new User(10, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz', '024-648-3804');
 // let users = [bret, antonette, samantha, karianne, kamren, leopoldo, elwyn, maxime, delphine, moriah];
 // - Відфільтрувати , залишивши тільки об'єкти з парними id
-// for (var i = 0; i < users.length; i++) {
+// for (let i = 0; i < users.length; i++) {
 //   if (users[i].id % 2) {
 //     users.splice(i, 1)
 //   }
