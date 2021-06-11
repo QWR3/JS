@@ -1,181 +1,172 @@
-// 1 створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
-// function User(id, name, surname, email, phone) {
-//   this.id = id;
-//   this.name = name;
-//   this.surname = surname;
-//   this.email = email;
-//   this.phone = phone;
-// }
-// створити пустий масив, наповнити його 10 об'єктами User
-// let bret = new User(1, 'Leanne', 'Graham', 'Sincere@april.biz', '1 - 770 - 736 - 8031');
-// let antonette = new User(2, 'Ervin', 'Howell', 'Shanna@melissa.tv', '010 - 692 - 6593');
-// let samantha = new User(3, 'Clementine', 'Bauch', 'Nathan@yesenia.net', '1 - 463 - 123 - 4447');
-// let karianne = new User(4, 'Patricia', 'Lebsack', 'Julianne.OConner@kory.org', '493-170-9623');
-// let kamren = new User(5, 'Chelsey', 'Dietrich', 'Lucio_Hettinger@annie.ca', '(254)954-1289');
-// let leopoldo = new User(6, 'Dennis', 'Schulist', 'Karley_Dach@jasper.info', '1-477-935-8478');
-// let elwyn = new User(7, 'Kurtis', 'Weissnat', 'Telly.Hoeger@billy.biz', '210.067.6132');
-// let maxime = new User(8, 'Nicholas', 'Runolfsdottir', 'Sherwood@rosamond.me', '586.493.6943');
-// let delphine = new User(9, 'Glenna', 'Reichert', 'Chaim_McDermott@dana.io', '(775)976-6794');
-// let moriah = new User(10, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz', '024-648-3804');
-// let users = [bret, antonette, samantha, karianne, kamren, leopoldo, elwyn, maxime, delphine, moriah];
-
-// 2 створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
-// створити пустий масив, наповнити його 10 об'єктами Client
-// class Client {
-//   constructor(id, name, surname , email, phone, order) {
-//       this.id = id;
-//       this.name = name;
-//       this.surname = surname;
-//       this.email = email;
-//       this.phone = phone;
-//       this.order = order;
-//   }
-// }
-//
-// let bret = new Client(1, 'Leanne', 'Graham', 'Sincere@april.biz', '1 - 770 - 736 - 8031',['yabko','phone','laptop']);
-// let antonette = new Client(2, 'Ervin', 'Howell', 'Shanna@melissa.tv', '010 - 692 - 6593',['grushka','water','bycicle']);
-// let samantha = new Client(3, 'Clementine', 'Bauch', 'Nathan@yesenia.net', '1 - 463 - 123 - 4447',['mouse','rebbit','TV']);
-// let karianne = new Client(4, 'Patricia', 'Lebsack', 'Julianne.OConner@kory.org', '493-170-9623',['cards','Monero','book']);
-// let kamren = new Client(5, 'Chelsey', 'Dietrich', 'Lucio_Hettinger@annie.ca', '(254)954-1289',['Manifest','bow','tree']);
-// let leopoldo = new Client(6, 'Dennis', 'Schulist', 'Karley_Dach@jasper.info', '1-477-935-8478',['work-book','pen']);
-// let elwyn = new Client(7, 'Kurtis', 'Weissnat', 'Telly.Hoeger@billy.biz', '210.067.6132',['manga','books']);
-// let maxime = new Client(8, 'Nicholas', 'Runolfsdottir', 'Sherwood@rosamond.me', '586.493.6943',['homyak','coca-cola']);
-// let delphine = new Client(9, 'Glenna', 'Reichert', 'Chaim_McDermott@dana.io', '(775)976-6794',['dog','pepsi']);
-// let moriah = new Client(10, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz', '024-648-3804',['nokia','cat']);
-// let clients = [bret, antonette, samantha, karianne, kamren, leopoldo, elwyn, maxime, delphine, moriah];
-// console.log(clients);
-// 3 Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість,
-//  об'єм двигуна. додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
-// -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-//
-// function Car(model, producer, age, speed, engine) {
-//   this.model = model;
-//   this.producer = producer;
-//   this.age = age;
-//   this.speed = speed;
-//   this.engine = engine;
-//   this.drive = () => {
-//     console.log(`Їдемо зі швидкістю ${this.speed} на годинну`);
-//   };
-//   this.info = () => {
-//     console.log(`model - ${this.model}`);
-//     console.log(`age - ${this.age}`);
-//     console.log(`speed - ${this.speed}`);
-//     console.log(`engine - ${this.engine}`);
-//   };
-//   this.increaseMaxSpeed = (newSpeed) => {
-//     this.speed = newSpeed;
-//   };
-//   this.changeYear = (newValue) => {
-//     this.age = newValue;
-//   }
-//   this.addDriver = (driver = {}) => {
-//     this.driver = driver
-//   }
-//
-// }
-
-//
-// 4 Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
-// -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-//
-// class Car {
-//   constructor(model, producer, age, speed, engine) {
-//     this.model = model;
-//     this.producer = producer;
+// -створити класс попелюшка з полями ім'я, вік, розмір ноги
+// class Princess {
+//   constructor(name, age, size) {
+//     this.name = name;
 //     this.age = age;
-//     this.speed = speed;
-//     this.engine = engine;
-//   }
+//     this.size = size;
 //
-//   info() {
-//     console.log(`model - ${this.model}`);
-//     console.log(`age - ${this.age}`);
-//     console.log(`speed - ${this.speed}`);
-//     console.log(`engine - ${this.engine}`);
-//   };
-//
-//   increaseMaxSpeed(newSpeed) {
-//     this.speed = newSpeed;
-//   };
-//
-//   changeYear(newValue) {
-//     this.age = newValue;
-//   }
-//   addDriver(driver = {}) {
-//     this.driver = driver
 //   }
 // }
-// let volga = new Car('volga', 'GAZ', '1950', 180, '90см^3')
-
-// 5 Взяти масив з завдання 1.
-// function User(id, name, surname, email, phone) {
-//   this.id = id;
+// --Створити 10 попелюшок , покласти їх в масив
+// let princess1 = new Princess('Name1', 23, 32)
+// let princess2 = new Princess('Name2', 24, 33)
+// let princess3 = new Princess('Name3', 25, 34)
+// let princess4 = new Princess('Name4', 26, 35)
+// let princess5 = new Princess('Name5', 27, 36)
+// let princess6 = new Princess('Name6', 28, 37)
+// let princess7 = new Princess('Name7', 29, 38)
+// let princess8 = new Princess('Name8', 30, 39)
+// let princess9 = new Princess('Name9', 31, 40)
+// let princess10 = new Princess('Name10', 32, 41)
+// let all_princess = [princess1, princess2, princess3, princess4, princess5, princess6, princess7, princess8, princess9, princess10]
+// --Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// class Prince {
+//   constructor(name, age, finded_size) {
+//     this.name = name;
+//     this.age = age;
+//     this.finded_size = finded_size;
+//   }
+// }
+// let prince = new Prince('Name_of_prince', 28, 38)
+// let best_of_the_best_princess
+// -- за допоиоги циклу знайти яка попелюшка повинна бути з принцом
+// for (let variable of all_princess) {
+//   if (prince.finded_size === variable.size) {
+//     best_of_the_best_princess = variable
+//   }
+// }
+// console.log(best_of_the_best_princess);
+//
+//
+// -створити функцію конструктор попелюшка з полями ім'я, вік, розмір ноги
+// function Princess(name, age, size) {
 //   this.name = name;
-//   this.surname = surname;
-//   this.email = email;
-//   this.phone = phone;
+//   this.size = size;
+//   this.age = age;
 // }
-// let bret = new User(1, 'Leanne', 'Graham', 'Sincere@april.biz', '1 - 770 - 736 - 8031');
-// let antonette = new User(2, 'Ervin', 'Howell', 'Shanna@melissa.tv', '010 - 692 - 6593');
-// let samantha = new User(3, 'Clementine', 'Bauch', 'Nathan@yesenia.net', '1 - 463 - 123 - 4447');
-// let karianne = new User(4, 'Patricia', 'Lebsack', 'Julianne.OConner@kory.org', '493-170-9623');
-// let kamren = new User(5, 'Chelsey', 'Dietrich', 'Lucio_Hettinger@annie.ca', '(254)954-1289');
-// let leopoldo = new User(6, 'Dennis', 'Schulist', 'Karley_Dach@jasper.info', '1-477-935-8478');
-// let elwyn = new User(7, 'Kurtis', 'Weissnat', 'Telly.Hoeger@billy.biz', '210.067.6132');
-// let maxime = new User(8, 'Nicholas', 'Runolfsdottir', 'Sherwood@rosamond.me', '586.493.6943');
-// let delphine = new User(9, 'Glenna', 'Reichert', 'Chaim_McDermott@dana.io', '(775)976-6794');
-// let moriah = new User(10, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz', '024-648-3804');
-// let users = [bret, antonette, samantha, karianne, kamren, leopoldo, elwyn, maxime, delphine, moriah];
-// - Відфільтрувати , залишивши тільки об'єкти з парними id
-// for (let i = 0; i < users.length; i++) {
-//   if (users[i].id % 2) {
-//     users.splice(i, 1)
+// --Створити 10 попелюшок , покласти їх в масив
+// let princess1 = new Princess('Name1', 23, 32)
+// let princess2 = new Princess('Name2', 24, 33)
+// let princess3 = new Princess('Name3', 25, 34)
+// let princess4 = new Princess('Name4', 26, 35)
+// let princess5 = new Princess('Name5', 27, 36)
+// let princess6 = new Princess('Name6', 28, 37)
+// let princess7 = new Princess('Name7', 29, 38)
+// let princess8 = new Princess('Name8', 30, 39)
+// let princess9 = new Princess('Name9', 31, 40)
+// let princess10 = new Princess('Name10', 32, 41)
+// let all_princess = [princess1, princess2, princess3, princess4, princess5, princess6, princess7, princess8, princess9, princess10]
+// --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
+// -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
+// function Prince(name, age, finded_size) {
+//   this.name = name;
+//   this.age = age;
+//   this.finded_size = finded_size;
+//   this.find_princess = (arr = []) => {
+//     return arr.find(value => value.size === this.finded_size)
 //   }
 // }
-// console.log(users);
-// - Відсортувати його по id. по зростанню
-// users.sort((a, b) => a.id - b.id)
-// console.log(users);
-// - Відсортувати його по id. по спаданню
+// let prince = new Prince('name_of_prince', 28, 36);
+// let result = prince.find_princess(all_princess);
+// console.log(result);
 //
-// users.sort((a, b) => b.id - a.id)
-// console.log(users);
-
-
-
-// 6. Взяти масив з завдання 2.
-//     Відсортувати його по кількості товарів в полі order. по спаданню
-class Client {
-  constructor(id, name, surname, email, phone, order) {
-    this.id = id;
-    this.name = name;
-    this.surname = surname;
-    this.email = email;
-    this.phone = phone;
-    this.order = order;
-  }
+//
+// -  Створити функцію конструктор для об'єкту який описує теги
+// Властивості
+//  -назва тегу
+//  - опис його дій
+//  - масив з атрибутами (2-3 атрибути максимум)
+//  Кожен атрибут описати як окремий який буде містити
+//  -назву атрибуту
+//  -опис дії атрибуту
+//  інформацію брати з htmlbook.ru
+//
+//  Таким чином описати теги
+//  -a
+//  -div
+//  -h1
+//  -span
+//  -input
+//  -form
+//  -option
+//  -select
+//  Приклад результуючого об'єкту
+//    {
+//         titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//         attrs: [
+//         {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//         {/*some props and values*/},
+//         {/*...*/},
+//         {/*...*/},
+//         ]
+//
+//    }
+function Teg(titleOfTag = '', action = '', attrs = []) {
+  this.titleOfTag = titleOfTag;
+  this.action = action;
+  this.attrs = attrs;
 }
-
-let bret = new Client(1, 'Leanne', 'Graham', 'Sincere@april.biz', '1 - 770 - 736 - 8031', ['yabko', 'phone', 'laptop']);
-let antonette = new Client(2, 'Ervin', 'Howell', 'Shanna@melissa.tv', '010 - 692 - 6593', ['grushka', 'water', 'bycicle']);
-let samantha = new Client(3, 'Clementine', 'Bauch', 'Nathan@yesenia.net', '1 - 463 - 123 - 4447', ['mouse', 'rebbit', 'TV']);
-let karianne = new Client(4, 'Patricia', 'Lebsack', 'Julianne.OConner@kory.org', '493-170-9623', ['cards', 'Monero', 'book']);
-let kamren = new Client(5, 'Chelsey', 'Dietrich', 'Lucio_Hettinger@annie.ca', '(254)954-1289', ['Manifest', 'bow', 'tree']);
-let leopoldo = new Client(6, 'Dennis', 'Schulist', 'Karley_Dach@jasper.info', '1-477-935-8478', ['work-book', 'pen']);
-let elwyn = new Client(7, 'Kurtis', 'Weissnat', 'Telly.Hoeger@billy.biz', '210.067.6132', ['manga', 'books']);
-let maxime = new Client(8, 'Nicholas', 'Runolfsdottir', 'Sherwood@rosamond.me', '586.493.6943', ['homyak', 'coca-cola']);
-let delphine = new Client(9, 'Glenna', 'Reichert', 'Chaim_McDermott@dana.io', '(775)976-6794', ['dog', 'pepsi']);
-let moriah = new Client(10, 'Clementina', 'DuBuque', 'Rey.Padberg@karina.biz', '024-648-3804', ['nokia', 'cat', 'phone', 'laptop']);
-let clients = [bret, antonette, samantha, karianne, kamren, leopoldo, elwyn, maxime, delphine, moriah];
-clients.sort((a, b) =>
-  b.order.length - a.order.length)
-console.log(clients);
+let a = new Teg('a', ' Тег <a> является одним из важных элементов HTML и предназначен для создания ссылок. В зависимости от присутствия атрибутов name или href тег <a> устанавливает ссылку или якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. Для создания ссылки необходимо сообщить браузеру, что является ссылкой, а также указать адрес документа, на который следует сделать ссылку.В качестве значения атрибута href используется адрес документа(URL, Universal Resource Locator, универсальный указатель ресурсов), на который происходит переход.Адрес ссылки может быть абсолютным и относительным.Абсолютные адреса работают везде и всюду независимо от имени сайта или веб - страницы, где прописана ссылка.Относительные ссылки, как следует из их названия, построены относительно текущего документа или корня сайта.',
+  [{
+      accesskey: 'Активация ссылки с помощью комбинации клавиш.'
+    },
+    {
+      coords: 'Устанавливает координаты активной области.'
+    }, {
+      download: 'Предлагает скачать указанный по ссылке файл.'
+    }
+  ])
+console.log(a);
+let div = new Teg('div', ' Элемент <div> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого. Как правило, вид блока управляется с помощью стилей. Чтобы не описывать каждый раз стиль внутри тега, можно выделить стиль во внешнюю таблицу стилей, а для тега добавить атрибут class или id с именем селектора. Как и при использовании других блочных элементов, содержимое тега < div > всегда начинается с новой строки.После него также добавляется перенос строки.',
+  [{
+      align: 'Задает выравнивание содержимого тега < div > .'
+    },
+    {
+      title: 'Добавляет всплывающую подсказку к содержимому.'
+    }
+  ]);
+console.log(div);
+let h1 = new Teg('h1', "HTML предлагает шесть заголовков разного уровня, которые показывают относительную важность секции, расположенной после заголовка. Так, тег <h1> представляет собой наиболее важный заголовок первого уровня, а тег <h6> служит для обозначения заголовка шестого уровня и является наименее значительным. По умолчанию, заголовок первого уровня отображается самым крупным шрифтом жирного начертания, заголовки последующего уровня по размеру меньше. Теги <h1>,...,<h6> относятся к блочным элементам, они всегда начинаются с новой строки, а после них другие элементы отображаются на следующей строке. Кроме того, перед заголовком и после него добавляется пустое пространство. ",
+  [{
+    align: 'Определяет выравнивание заголовка. '
+  }]);
+console.log(h1);
+let span = new Teg('span', "Тег <span> предназначен для определения строчных элементов документа. В отличие от блочных элементов, таких как <table>, <p> или <div>, с помощью тега <span> можно выделить часть информации внутри других тегов и установить для нее свой стиль. Например, внутри абзаца (тега <p>) можно изменить цвет и размер первой буквы, если добавить начальный и конечный тег <span> и определить для него стиль текста. Чтобы не описывать каждый раз стиль внутри тега, можно выделить стиль во внешнюю таблицу стилей, а для тега добавить атрибут class или id с именем селектора.", "Для этого тега доступны универсальные атрибуты и события.");
+let input = new Teg('input', " Тег <input> является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем. Главным образом <input> предназначен для создания текстовых полей, различных кнопок, переключателей и флажков. Хотя элемент <input> не требуется помещать внутрь контейнера <form>, определяющего форму, но если введенные пользователем данные должны быть отправлены на сервер, где их обрабатывает серверная программа, то указывать <form> обязательно. То же самое обстоит и в случае обработки данных с помощью клиентских приложений, например, скриптов на языке JavaScript.Основной атрибут тега <input>, определяющий вид элемента — type. Он позволяет задавать следующие элементы формы: текстовое поле (text), поле с паролем (password), переключатель (radio), флажок (checkbox), скрытое поле (hidden), кнопка (button), кнопка для отправки формы (submit), кнопка для очистки формы (reset), поле для отправки файла (file) и кнопка с изображением (image). Для каждого элемента существует свой список атрибутов, которые определяют его вид и характеристики. Кроме того, в HTML5 добавлено еще более десятка новых элементов.",
+  [{
+    accept: "Устанавливает фильтр на типы файлов, которые вы можете отправить через поле загрузки файлов."
+  }, {
+    accesskey: "Переход к элементу с помощью комбинации клавиш. "
+  }, {
+    align: "Определяет выравнивание изображения. "
+  }])
+console.log(span);
+console.log(input);
+let form = new Teg('form', " Тег <form> устанавливает форму на веб-странице. Форма предназначена для обмена данными между пользователем и сервером. Область применения форм не ограничена отправкой данных на сервер, с помощью клиентских скриптов можно получить доступ к любому элементу формы, изменять его и применять по своему усмотрению.Документ может содержать любое количество форм, но одновременно на сервер может быть отправлена только одна форма. По этой причине данные форм должны быть независимы друг от друга.Для отправки формы на сервер используется кнопка Submit, того же можно добиться, если нажать клавишу Enter в пределах формы. Если кнопка Submit отсутствует в форме, клавиша Enter имитирует ее использование.Когда форма отправляется на сервер, управление данными передается программе, заданной атрибутом action тега <form>. Предварительно браузер подготавливает информацию в виде пары «имя=значение», где имя определяется атрибутом name тега <input>, а значение введено пользователем или установлено в поле формы по умолчанию. Если для отправки данных используется метод GET, то адресная строка может принимать следующий вид.",
+  [{
+    acceptCharset: "Устанавливает кодировку, в которой сервер может принимать и обрабатывать данные."
+  }, {
+    action: "Адрес программы или документа, который обрабатывает данные формы."
+  }, {
+    autocomplete: "Включает автозаполнение полей формы."
+  }])
+console.log(form);
+let option = new Teg('option', "Тег <option> определяет отдельные пункты списка, создаваемого с помощью контейнера <select>. Ширина списка определяется самым широким текстом, указанным в теге <option>, а также может изменяться с помощью стилей. Если планируется отправлять данные списка на сервер, то требуется поместить элемент <select> внутрь формы. Это также необходимо, когда к данным списка идет обращение через скрипты.",
+  [{
+    disabled: "Заблокировать для доступа элемент списка."
+  }, {
+    label: "Указание метки пункта списка."
+  }, {
+    selected: "Заранее устанавливает определенный пункт списка выделенным. "
+  }])
+console.log(option);
+let select = new Teg('select', "Тег <select> позволяет создать элемент интерфейса в виде раскрывающегося списка, а также список с одним или множественным выбором, как показано далее. Конечный вид зависит от использования атрибута size тега <select>, который устанавливает высоту списка. Ширина списка определяется самым широким текстом, указанным в теге <option>, а также может изменяться с помощью стилей. Каждый пункт создается с помощью тега <option>, который должен быть вложен в контейнер <select>. Если планируется отправлять данные списка на сервер, то требуется поместить элемент <select> внутрь формы. Это также необходимо, когда к данным списка идет обращение через скрипты. ",
+  [{
+    accesskey: "Позволяет перейти к списку с помощью некоторого сочетания клавиш."
+  }, {
+    autofocus: "Устанавливает, что список получает фокус после загрузки страницы."
+  }, {
+    disabled: "Блокирует доступ и изменение элемента. "
+  }])
+console.log(select);
