@@ -121,6 +121,60 @@
 // створити елемент <a href='list.html'> На сторінку товарів</a>, та list.html, при переході на який відобразити на сторінці всі товари.
 // На сторінці  list.html побудувати кнопку яка видаляє всі товари з корзини та локалстораджа.
 //
+// let form2 = document.getElementById("form2");
+//
+// if (form2) {
+//   let lists = []
+//   form2.addEventListener("submit", (e) => {
+//     let name = form2.name.value;
+//     let number = form2.number.value;
+//     let price = form2.price.value;
+//     let image = form2.image.value;
+//     e.preventDefault()
+//     let list = {
+//       name: name,
+//       number: number,
+//       price: price,
+//       image: image
+//     }
+//     lists.push(list);
+//     localStorage.setItem("lists", JSON.stringify(lists))
+//     console.log(name, number, price, image);
+//     console.log(lists);
+//     console.log('aaaaaaaa');
+//   })
+//
+// }
+// let list_html = document.getElementById("list_html");
+// let remove_all = document.getElementById("remove_all");
+// if (list_html) {
+//   let lists = JSON.parse(localStorage.getItem('lists'));
+//   if (lists) {
+//     for (let variable of lists) {
+//       console.log(variable);
+//       // tags.push(variable)
+//       for (let tag in variable) {
+//         console.log("*************");
+//         console.log(tag);
+//         console.log(variable[tag]);
+//         console.log("*************");
+//         let newDiv = document.createElement("div");
+//         list_html.appendChild(newDiv)
+//         newDiv.innerText = `${tag} - ${variable[tag]}`
+//       }
+//       let for_best_reading = document.createElement("div");
+//       list_html.appendChild(for_best_reading)
+//       for_best_reading.innerText = `*******************************`
+//     }
+//     remove_all.addEventListener("click", (e) => {
+//       localStorage.clear();
+//       location = location;
+//     })
+//   }
+// }
+//
+// ДОДАТКОВО
+// До кожного товару додати кнопку, при кліку на яку з лс видаляється конкретний обраний  товар
 let form2 = document.getElementById("form2");
 
 if (form2) {
@@ -141,7 +195,6 @@ if (form2) {
     localStorage.setItem("lists", JSON.stringify(lists))
     console.log(name, number, price, image);
     console.log(lists);
-    console.log('aaaaaaaa');
   })
 
 }
@@ -150,14 +203,12 @@ let remove_all = document.getElementById("remove_all");
 if (list_html) {
   let lists = JSON.parse(localStorage.getItem('lists'));
   if (lists) {
-    for (let variable of lists) {
-      console.log(variable);
-      // tags.push(variable)
+    for (let i = 0; i < lists.length; i++) {
+      let variable = lists[i]
+      let remove_this = document.createElement("button");
+      list_html.appendChild(remove_this)
+      remove_this.innerText = `видалити саме цей товар`
       for (let tag in variable) {
-        console.log("*************");
-        console.log(tag);
-        console.log(variable[tag]);
-        console.log("*************");
         let newDiv = document.createElement("div");
         list_html.appendChild(newDiv)
         newDiv.innerText = `${tag} - ${variable[tag]}`
@@ -165,7 +216,18 @@ if (list_html) {
       let for_best_reading = document.createElement("div");
       list_html.appendChild(for_best_reading)
       for_best_reading.innerText = `*******************************`
+      remove_this.addEventListener("click", (e) => {
+        let after_remove_this = JSON.parse(JSON.stringify(lists));
+        delete after_remove_this[i]
+        let json_after_remove_this=JSON.stringify(after_remove_this)
+        console.log(json_after_remove_this);
+        console.log(after_remove_this);
+        localStorage.removeItem('lists');
+        localStorage.setItem("lists",json_after_remove_this)
+        location = location;
+      })
     }
+
     remove_all.addEventListener("click", (e) => {
       localStorage.clear();
       location = location;
